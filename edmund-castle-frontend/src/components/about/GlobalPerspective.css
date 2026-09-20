@@ -1,0 +1,67 @@
+.global-perspective {
+  padding-block: 2.5rem 3rem;
+}
+
+.global-perspective__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.global-perspective__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.global-perspective__title {
+  font-size: clamp(1.625rem, 2.6vw, 2rem);
+}
+
+.global-perspective__text {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-ink-700);
+}
+
+.global-perspective__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-perspective__image {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-navy-800);
+  background-position: center;
+  background-size: cover;
+}
+
+.global-perspective__item-title {
+  margin-top: 0.75rem;
+  font-size: 1.1875rem;
+}
+
+.global-perspective__item-text {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-ink-500);
+}
+
+@media (min-width: 40rem) {
+  .global-perspective__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .global-perspective__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.6fr);
+    gap: 2.5rem;
+  }
+}

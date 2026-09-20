@@ -1,0 +1,26 @@
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: 0 12px 24px rgba(7, 26, 46, 0.08);
+}
+
+.mobile-menu__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-block: 0.5rem 1.5rem;
+}
+
+.mobile-menu .mobile-menu__cta {
+  width: 100%;
+}
+
+@media (min-width: 64rem) {
+  .mobile-menu {
+    display: none;
+  }
+}

@@ -1,0 +1,105 @@
+.testimonial-stats {
+  padding-block: 1.5rem 2.25rem;
+}
+
+.testimonial-stats__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testimonial-stats__quote {
+  position: relative;
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 4rem;
+  border-left: 2px solid var(--color-bronze-500);
+}
+
+.testimonial-stats__quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.25rem;
+  left: 1rem;
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-bronze-600);
+}
+
+.testimonial-stats__text {
+  margin: 0 0 1rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--color-navy-800);
+}
+
+.testimonial-stats__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  font-size: 0.8125rem;
+  color: var(--color-ink-500);
+}
+
+.testimonial-stats__author strong {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-navy-900);
+}
+
+.testimonial-stats__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.testimonial-stats__stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-stats__icon {
+  flex: none;
+  color: var(--color-bronze-600);
+}
+
+.testimonial-stats__value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-navy-800);
+}
+
+.testimonial-stats__label {
+  margin-top: 0.3rem;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--color-ink-500);
+}
+
+@media (min-width: 40rem) {
+  .testimonial-stats__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .testimonial-stats__stat {
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--color-line);
+  }
+}
+
+@media (min-width: 64rem) {
+  .testimonial-stats__inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}

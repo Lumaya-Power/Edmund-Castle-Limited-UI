@@ -1,0 +1,24 @@
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-bronze-600);
+  text-decoration: none;
+}
+
+.text-link:hover {
+  color: var(--color-bronze-700);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.text-link svg {
+  flex: none;
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover svg {
+  transform: translateX(3px);
+}

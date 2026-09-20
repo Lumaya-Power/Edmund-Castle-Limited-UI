@@ -1,0 +1,116 @@
+.page-hero {
+  color: #fff;
+  background-color: var(--color-navy-900);
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 46, 0.94) 0%,
+      rgba(7, 26, 46, 0.78) 40%,
+      rgba(7, 26, 46, 0.2) 75%,
+      rgba(7, 26, 46, 0.1) 100%
+    ),
+    var(--page-hero-image);
+  background-position: center right;
+  background-size: cover;
+}
+
+.page-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 15rem;
+  padding-block: clamp(2rem, 4vw, 3rem);
+}
+
+.page-hero__content {
+  max-width: 36rem;
+}
+
+.page-hero__eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.page-hero__title {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  line-height: 1.05;
+  color: #fff;
+}
+
+.page-hero__lead {
+  max-width: 24em;
+  font-family: var(--font-serif);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.3;
+}
+
+.page-hero .page-hero__cta {
+  margin-top: 1.5rem;
+}
+
+.page-hero__aside {
+  display: none;
+}
+
+@media (max-width: 47.99rem) {
+  .page-hero {
+    background-image:
+      linear-gradient(180deg, rgba(7, 26, 46, 0.88) 0%, rgba(7, 26, 46, 0.78) 100%),
+      var(--page-hero-image);
+  }
+}
+
+@media (min-width: 64rem) {
+  .page-hero__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .page-hero__aside {
+    display: block;
+    padding-right: 1rem;
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-style: italic;
+    line-height: 1.15;
+  }
+
+  .page-hero__aside::before {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin-bottom: 1rem;
+    background: var(--color-bronze-500);
+  }
+
+  .page-hero__aside span {
+    display: block;
+  }
+
+  .page-hero__title-line {
+  display: block;
+}
+
+.page-hero--md .page-hero__content {
+  max-width: 44rem;
+}
+
+.page-hero--md .page-hero__title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+}
+
+.page-hero--md .page-hero__lead {
+  max-width: 34em;
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.5;
+}
+.page-hero__extra {
+  margin-top: 1.75rem;
+}
+}

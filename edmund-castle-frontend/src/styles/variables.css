@@ -1,0 +1,35 @@
+:root {
+  /* Colour */
+  --color-navy-950: #071a2e;
+  --color-navy-900: #0b2340;
+  --color-navy-800: #102d50;
+  --color-bronze-700: #8c541d;
+  --color-bronze-600: #a4652a;
+  --color-bronze-500: #b87a3c;
+  --color-ink-700: #3d4957;
+  --color-ink-500: #5f6b78;
+  --color-line: #e4e4de;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f6f3;
+
+  /* Type */
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Space */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --container-max: 1280px;
+  --gutter: clamp(1.25rem, 4.5vw, 3rem);
+  --header-height: 4.5rem;
+  --radius-sm: 2px;
+}

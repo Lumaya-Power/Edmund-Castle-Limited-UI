@@ -1,0 +1,35 @@
+.services-overview {
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  scroll-margin-top: calc(var(--header-height) + 4.5rem);
+}
+
+.services-overview__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.services-overview__intro {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-ink-700);
+}
+
+.services-overview__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 56rem) {
+  .services-overview__header {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+    gap: 3rem;
+  }
+
+  .services-overview__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,119 @@
+.process {
+  padding-block: clamp(2rem, 4vw, 2.75rem);
+}
+
+.process__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.process__intro {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-ink-700);
+}
+
+.process__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.process__step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.process__number {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-bronze-600);
+  border-radius: 50%;
+}
+
+.process__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.process__icon {
+  color: var(--color-bronze-600);
+}
+
+.process__title {
+  font-size: 1.375rem;
+}
+
+.process__text {
+  max-width: 26rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-ink-700);
+}
+
+@media (min-width: 64rem) {
+  .process__list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .process__step {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .process__content {
+    align-items: center;
+    align-self: stretch;
+    padding-inline: 1rem;
+  }
+
+  .process__step + .process__step .process__content {
+    border-left: 1px solid var(--color-line);
+  }
+
+  /* Line joining one numbered circle to the next */
+  .process__step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 1.25rem;
+    right: calc(-50% + 1.75rem);
+    left: calc(50% + 1.75rem);
+    height: 1px;
+    background: var(--color-bronze-500);
+  }
+
+  /* Small arrow head in the middle of that line */
+  .process__step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: calc(1.25rem - 3.5px);
+    left: 100%;
+    z-index: 1;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid var(--color-bronze-500);
+    border-right: 1px solid var(--color-bronze-500);
+    transform: translateX(-50%) rotate(45deg);
+  }
+}

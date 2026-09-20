@@ -1,0 +1,1 @@
+import{o as e}from"./index-BduYxsnI.js";var t=e();function n(){return(0,t.jsx)(`section`,{className:`container page-stub`,children:(0,t.jsx)(`h1`,{children:`Legal`})})}export{n as default};
